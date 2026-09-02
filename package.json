@@ -1,0 +1,13 @@
+{
+  "name": "technova69",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Technova69 PHP portal",
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0",
+    "dev:backend": "powershell -NoLogo -NoProfile -ExecutionPolicy Bypass -Command \"$php = 'C:\\xampp\\php\\php.exe'; if (-not (Test-Path $php)) { $php = 'php' }; if (-not (Get-Command $php -ErrorAction SilentlyContinue)) { Write-Error 'PHP not found. Install XAMPP or add php to PATH.'; exit 1 }; & $php -S localhost:8000 -t .\"",
+    "dev:frontend": "powershell -NoLogo -NoProfile -Command \"Start-Process http://localhost:8000\"",
+    "dev:all": "powershell -NoLogo -NoProfile -ExecutionPolicy Bypass -Command \"$php = 'C:\\xampp\\php\\php.exe'; if (-not (Test-Path $php)) { $php = 'php' }; if (-not (Get-Command $php -ErrorAction SilentlyContinue)) { Write-Error 'PHP not found. Install XAMPP or add php to PATH.'; exit 1 }; Start-Process http://localhost:8000; & $php -S localhost:8000 -t .\"",
+    "start": "npm run dev:all"
+  }
+}
