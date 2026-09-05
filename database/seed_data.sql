@@ -15,7 +15,7 @@ USE `academia_portal`;
 INSERT INTO `users` (`name`, `email`, `password`, `role`) VALUES
 ('Rahul Sharma',  'student@demo.com',   '$2y$10$DsPmLhFMb.14BYo4pLTaGuBs6iOAEqIIxB9CaMjmMNCfC/2GvOpYu', 'student'),
 ('Dr. Anita Verma', 'teacher@demo.com', '$2y$10$31MMz7l9NpcMHah/M9ZnI.n/BXlUA4H8mjgimTlqBP7lvaCheP7hO', 'academician'),
-('TechNova Solutions', 'industry@demo.com', '$2y$10$CS1VXUPJ8MRmMGHAsqrXeeiuV2JZ2y6MVQ5KgJRGsAI9gsupQpK3O', 'industry'),
+('SkillSync', 'industry@demo.com', '$2y$10$CS1VXUPJ8MRmMGHAsqrXeeiuV2JZ2y6MVQ5KgJRGsAI9gsupQpK3O', 'industry'),
 ('IIIT Delhi', 'college@demo.com', '$2y$10$2RKgXR3.V4cQswaqUC4tQO.UJHufmNpt1Hlx.mSlWzOZ/B.6uMWHa', 'institution');
 
 -- ---------- Role details ----------
@@ -26,7 +26,7 @@ INSERT INTO `academician_details` (`user_id`, `college_name`, `department`, `des
 SELECT id, 'IIIT Delhi', 'Computer Science', 'Associate Professor' FROM `users` WHERE `email` = 'teacher@demo.com';
 
 INSERT INTO `industry_details` (`user_id`, `company_name`, `industry_type`, `company_size`, `website`)
-SELECT id, 'TechNova Solutions', 'IT Services', '251-1000', 'https://technova.example.com' FROM `users` WHERE `email` = 'industry@demo.com';
+SELECT id, 'SkillSync', 'IT Services', '251-1000', 'https://skillsync.example.com' FROM `users` WHERE `email` = 'industry@demo.com';
 
 INSERT INTO `institution_details` (`user_id`, `institution_name`, `institution_type`, `location`)
 SELECT id, 'IIIT Delhi', 'University', 'New Delhi' FROM `users` WHERE `email` = 'college@demo.com';
